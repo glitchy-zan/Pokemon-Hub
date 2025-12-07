@@ -1,38 +1,54 @@
-# pokemonProject
+## 🎯 Project Overview
 
-This template should help get you started developing with Vue 3 in Vite.
+Pokemon Explorer is a full-featured web application that allows users to browse, search, filter, and compare Pokemon. The application fetches data from the PokeAPI and presents it in an intuitive, responsive interface.
 
-## Recommended IDE Setup
+## ✨ Key Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Core Functionality
+- **Pokemon Grid Display** - Browse 20 Pokemon per page with card-based layout
+- **Search Functionality** - Search for specific Pokemon by name with validation
+- **Type Filtering** - Filter Pokemon by type (fire, water, grass, etc.) with visual type indicators
+- **Pagination** - Navigate through Pokemon list with previous/next controls
+- **Detailed Pokemon View** - View comprehensive stats, abilities, and information for each Pokemon
+- **Pokemon Comparison** - Side-by-side comparison of two Pokemon with visual stat bars
 
-## Recommended Browser Setup
+### Technical Implementation
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+**Vue Directives Used:**
+- `v-model` - Two-way data binding for search inputs
+- `v-if` / `v-else` - Conditional rendering for loading states and data display
+- `v-for` - List rendering for Pokemon cards, types, stats, and abilities
+- `v-bind` (`:`) - Dynamic attribute binding for classes, styles, and props
+- `v-on` (`@`) - Event handling for clicks, form submissions, and navigation
+- `:class` - Dynamic CSS classes based on Pokemon types
 
-## Customize configuration
+**State Management:**
+- Pinia store for centralized state management
+- Reactive state for Pokemon data, pagination, and filtering
+- Store actions for API calls and data mutations
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+**Routing:**
+- Vue Router for navigation between views
+- Dynamic routes for Pokemon details (`/pokemon/:name`)
+- Programmatic navigation for search and card clicks
+- Route parameters for passing Pokemon names
 
-## Project Setup
+**API Integration:**
+- RESTful API calls to PokeAPI (https://pokeapi.co)
+- Async/await for handling asynchronous operations
+- Error handling with user-friendly alerts
+- Loading states during data fetching
 
-```sh
-npm install
-```
+**UI/UX Features:**
+- Custom SVG icons for filter and search
+- Animated CSS loader during data fetching
+- Type-based color gradients for cards and details
+- Scoped component styling
+- Modal popup for type filtering
+- Visual stat comparison bars
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+**Component Architecture:**
+- Reusable PokemonCard component
+- Props and events for parent-child communication
+- Options API throughout the project
+- Lifecycle hooks (mounted) for data initialization
