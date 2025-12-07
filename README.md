@@ -52,3 +52,6 @@ Pokemon Explorer is a full-featured web application that allows users to browse,
 - Props and events for parent-child communication
 - Options API throughout the project
 - Lifecycle hooks (mounted) for data initialization
+
+**YOUTUBE Link**
+https://youtu.be/5FALSVJeFpw
